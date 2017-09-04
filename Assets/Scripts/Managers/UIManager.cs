@@ -9,12 +9,11 @@ public class UIManager : MonoBehaviour {
 	public Text MaxFame;
 	public Text ItemLeft;
 
-	public void Initialize(Country currentCountry, Merchant merchant){
+	public void Initialize(CountryManager currentCountry, Merchant merchant){
 
 		CurrentFame.text = currentCountry.CurrentFame + "";
 		MaxFame.text = currentCountry.CurrentLevel.RequiredFame + "";
 		ItemLeft.text = merchant.Store.Inventory.Item.Length + "";
-
 	}
 
 	public void OnNextLevel(Level level){

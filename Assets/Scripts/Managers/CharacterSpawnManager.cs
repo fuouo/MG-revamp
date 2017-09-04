@@ -63,7 +63,7 @@ public class CharacterSpawnManager : MonoBehaviour {
 	}
 
 
-	void SpawnEntity(Character[] entities){
+	void SpawnEntity(string[] entities){
 
 		var negXBound = -CitizenSpawnArea.GetComponent<SpriteRenderer> ().bounds.max.x;
 		var posXBound = CitizenSpawnArea.GetComponent<SpriteRenderer> ().bounds.max.x;
@@ -72,7 +72,7 @@ public class CharacterSpawnManager : MonoBehaviour {
 
 		var randomIndex = (int) Random.Range (0, 1);
  
-		GameObject entity = (GameObject) Instantiate (entities [randomIndex].gameObject);
+		GameObject entity = (GameObject) Instantiate (Resources.Load(FilePath.CITIZEN_PREFAB_FOLDER + "/" + entities [randomIndex]));
 		entity.transform.SetParent (CitizenSpawnArea.transform);
 
 		Vector2 position = Vector2.zero;

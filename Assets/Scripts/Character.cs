@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+//TODO: Should Character be a ScriptableObject or MonoBehavior
 public class Character : MonoBehaviour {
 
 	public string Name;

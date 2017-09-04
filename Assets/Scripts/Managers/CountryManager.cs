@@ -7,10 +7,13 @@ public class CountryManager : MonoBehaviour {
 	public static CountryManager _instance;
 
 	public UIManager uiManager;
+	public GameObject background;
+
 
 	public Country CurrentCountry;
-	public int CurrentFame;
 	public Level CurrentLevel;
+	public int CurrentFame;
+
 
 
 	void Awake(){
@@ -20,7 +23,9 @@ public class CountryManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		uiManager.Initialize (CurrentCountry, GameManager._instance.merchant);
+		background.GetComponent<SpriteRenderer> ().sprite = CurrentCountry.Background;
+
+		uiManager.Initialize (this, GameManager._instance.merchant);
 		
 	}
 	
@@ -31,8 +36,9 @@ public class CountryManager : MonoBehaviour {
 
 
 	public bool AddFameToCountry(Character ch){
-		CurrentCountry.CurrentFame += GameManager._instance.merchant.Charm;
+		CurrentFame += GameManager._instance.merchant.Charm;
 		CharacterSpawnManager._instance.DeSpawnEntity (ch);
+		uiManager.OnAddFame (CurrentFame);
 
 		return true;
 

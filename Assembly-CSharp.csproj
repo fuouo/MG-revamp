@@ -48,16 +48,17 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Character.cs" />
      <Compile Include="Assets\Scripts\CharacterStatus.cs" />
-     <Compile Include="Assets\Scripts\Country.cs" />
+     <Compile Include="Assets\Scripts\Data\Country.cs" />
      <Compile Include="Assets\Scripts\Data\Item.cs" />
+     <Compile Include="Assets\Scripts\Data\Level.cs" />
      <Compile Include="Assets\Scripts\Inventory.cs" />
-     <Compile Include="Assets\Scripts\Level.cs" />
      <Compile Include="Assets\Scripts\Managers\CharacterSpawnManager.cs" />
      <Compile Include="Assets\Scripts\Managers\ClickManager.cs" />
      <Compile Include="Assets\Scripts\Managers\CountryManager.cs" />
      <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
      <Compile Include="Assets\Scripts\Managers\UIManager.cs" />
      <Compile Include="Assets\Scripts\Merchant.cs" />
+     <Compile Include="Assets\Scripts\StaticVariables\FilePath.cs" />
      <Compile Include="Assets\Scripts\Store.cs" />
      <Compile Include="Assets\Scripts\Test.cs" />
      <Compile Include="Assets\Scripts\UI\HeartContainer.cs" />
